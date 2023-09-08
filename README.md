@@ -20,7 +20,12 @@ Icon design done
 What we current focus on:
 
 Zuxuan: module 2 - location search UI
+
 Sid: module 3 - searching for locations
+
 Shejal: module 4 - selecting a location
+
 Kevin: module 5 - getting location coordinates
+
 Yanxi: module 6 - adding annotation to map
+
