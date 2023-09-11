@@ -19,7 +19,7 @@ Icon design done
 
 What we current focus on:
 
-Zuxuan: module 2 - location search UI
+Zuxuan: module 2 - location search UI -- done
 
 Sid: module 3 - searching for locations
 
