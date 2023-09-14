@@ -3,14 +3,14 @@
 //  CSCI6212_Project
 //
 //  Created by zuxuan chen on 9/11/23.
-//
+//  Updated by Shiddarth Srivastava on 09/13/2023.
 
 import SwiftUI
 
 struct LocationSearchView: View {
     @State private var startLocationText = ""
     @State private var destinationLocationText = ""
-    
+    @StateObject var viewModel= Location SearchViewModel()
     var body: some View {
         VStack{
             //header view
@@ -37,7 +37,7 @@ struct LocationSearchView: View {
                     .padding(.trailing)
                     
                     TextField("Where to?", text:
-                                $startLocationText)
+                                $viewModel.queryFragment)
                     .frame(height: 32)
                     .background(Color(
                         .systemGray4))
@@ -54,10 +54,10 @@ struct LocationSearchView: View {
             // list view
             ScrollView{
                 VStack(alignment: .leading){
-                    ForEach(0 ..< 20, id: \.self){
-                        _ in
+                    ForEach(viewModel.results, id: \.self){
+                        result in
                         
-                        LocationSearchResultCell()
+                        LocationSearchResultCell(title:results.title, subtitles:results.subtitle)
                     }
                 }
             }
@@ -66,6 +66,10 @@ struct LocationSearchView: View {
     }
 }
 
-#Preview {
-    LocationSearchView()
+//Updated by shiddarth video timing : 1:19:48 
+struct LocationSearchView_Preview : PreviewProvider {
+    static var preview: some View{
+        LocationSearchView()
+    }
+    LocationSearchView() 
 }
