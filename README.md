@@ -21,7 +21,7 @@ What we current focus on:
 
 Zuxuan: module 2 - location search UI -- done
 
-Sid: module 3 - searching for locations
+Sid: module 3 - searching for locations --done
 
 Shejal: module 4 - selecting a location
 
