@@ -3,11 +3,12 @@
 //  CSCI6212_Project
 //
 //  Created by zuxuan chen on 9/11/23.
-//
-
+//  Updated by Shiddarth Srivastava on 09/13/2023.
 import SwiftUI
 
 struct LocationSearchResultCell: View {
+    let title: String
+    let subtitle: String
     var body: some View {
         HStack{
             Image(systemName: "mappin.circle.fill")
@@ -17,10 +18,10 @@ struct LocationSearchResultCell: View {
                 .frame(width:40, height: 40)
             
             VStack(alignment: .leading, spacing: 4){
-                Text("Starbucks Coffee")
+                Text(title)
                     .font(.body)
                 
-                Text("123 Main St")
+                Text(subtitle)
                     .font(.system(size: 15))
                     .foregroundStyle(.gray)
                 
@@ -34,5 +35,5 @@ struct LocationSearchResultCell: View {
 }
 
 #Preview {
-    LocationSearchResultCell()
+    LocationSearchResultCell(title:"Starbucks", subtitle:"123 Main Street")
 }
