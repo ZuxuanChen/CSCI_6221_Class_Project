@@ -34,6 +34,10 @@ struct LocationSearchResultCell: View {
     }
 }
 
-#Preview {
-    LocationSearchResultCell(title:"Starbucks", subtitle:"123 Main Street")
+struct test_Previews_4: PreviewProvider {
+    static var previews: some View {
+        LocationSearchResultCell(title:"Starbucks", subtitle:"123 Main Street")
+    }
 }
+
+

@@ -32,6 +32,8 @@ struct LocationSearchActivationView: View {
     }
 }
 
-#Preview {
-    LocationSearchActivationView()
+struct test_Previews_1: PreviewProvider {
+    static var previews: some View {
+        LocationSearchActivationView()
+    }
 }
