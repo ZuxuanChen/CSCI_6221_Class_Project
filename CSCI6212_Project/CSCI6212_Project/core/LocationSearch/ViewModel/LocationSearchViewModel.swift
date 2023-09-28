@@ -27,8 +27,24 @@ class LocationSearchViewModel: NSObject, ObservableObject{
         searchCompleter.queryFragment = queryFragment
         }
     //Mark helpers
-    func selectLocation(_location:String){
-        self.selectedLocation=_location
+    func selectLocation(_ localSearch:MKLocalSearchCompletion){
+        locationSearch(forLocalSearchCompletion: localSearch){response, error in
+            if let error=error{
+                print("Debug:location sdearch failed with error \(error.localizedDescription)")
+                return
+            }
+            guard  let item=response?.mapItems.first else{return}
+            let coordinate=item.placemark.coordinate
+            print("DEBUG:Location coordinates \(coordinate)")
+            
+        }
+    }
+    func locationSearch(forLocalSearchCompletion localSearch: MKLocalSearchCompletion,completion:@escaping MKLocalSearch.CompletionHandler){
+        let searchRequest=MKLocalSearch.Request()
+        searchRequest.naturalLanguageQuery=localSearch.title.appending(localSearch.subtitle)
+        let search=MKLocalSearch(request: searchRequest)
+        search.start(completionHandler: completion)
+        
     }
 
 }
