@@ -28,6 +28,8 @@ struct MapViewActionButton: View {
     
 }
 
-#Preview {
-    MapViewActionButton(showLocationSearchView: .constant(true))
+struct test_Previews_5: PreviewProvider {
+    static var previews: some View {
+        MapViewActionButton(showLocationSearchView: .constant(true))
+    }
 }

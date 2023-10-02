@@ -52,7 +52,6 @@
 				CA0F76EB2AAED60200FE1EAC /* LocationSearchActivationView.swift */,
 				CA0F76F12AAEDB5F00FE1EAC /* LocationSearchView.swift */,
 				CA0F76F32AAEDFAB00FE1EAC /* LocationSearchResultCell.swift */,
-				CA7EA9542AB4CBB300CCF19F /* LocationSearchViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -60,6 +59,7 @@
 		CA0F76EA2AAED5CD00FE1EAC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CA7EA9542AB4CBB300CCF19F /* LocationSearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
