@@ -28,7 +28,7 @@ Sid: module 3 - searching for locations -- done
 
 Shejal: module 4 - selecting a location-- done
 
-Kevin: module 5 - getting location coordinates
+Kevin(Shejal helped): module 5 - getting location coordinates -- done
 
-Yanxi: module 6 - adding annotation to map
+Yanxi (Zuxuan Helped): module 6 - adding annotation to map -- done
 
